@@ -1,0 +1,10 @@
+.history
+examples/
+other_project/
+output/
+test_data/
+details.txt
+.DS_Store
+
+
+nessusmerger
