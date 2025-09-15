@@ -25,13 +25,13 @@ jobs:
         with:
           go-version: ${{ matrix.go-version }}
 
-      - name: Build
-        run: |
-          if [ "${{ matrix.os }}" == "windows-latest" ]; then
-            go build -o nessusmerger-${{ matrix.os }}.exe ./...
-          else
-            go build -o nessusmerger-${{ matrix.os }} ./...
-          fi
+      - name: Build on Windows
+        if: runner.os == 'Windows'
+        run: go build -o nessusmerger-${{ matrix.os }}.exe ./...
+
+      - name: Build on Linux and macOS
+        if: runner.os != 'Windows'
+        run: go build -o nessusmerger-${{ matrix.os }} ./...
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
