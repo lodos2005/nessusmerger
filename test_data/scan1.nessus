@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NessusClientData_v2>
+  <Policy>
+    <policyName>Basic Network Scan</policyName>
+    <policyComments></policyComments>
+  </Policy>
+  <Report name="Test Report 1">
+    <ReportHost name="192.168.1.1">
+      <HostProperties>
+        <tag name="host-ip">192.168.1.1</tag>
+        <tag name="operating-system">Linux</tag>
+      </HostProperties>
+      <ReportItem port="80" svc_name="http" protocol="tcp" severity="1" pluginID="10386" pluginName="Web Server" pluginFamily="Web Servers">
+        <synopsis>A web server is running on this port.</synopsis>
+      </ReportItem>
+    </ReportHost>
+    <ReportHost name="192.168.1.2">
+      <HostProperties>
+        <tag name="host-ip">192.168.1.2</tag>
+        <tag name="operating-system">Windows</tag>
+      </HostProperties>
+      <ReportItem port="445" svc_name="microsoft-ds" protocol="tcp" severity="2" pluginID="10394" pluginName="SMB Share" pluginFamily="Windows">
+        <synopsis>SMB shares are available on this host.</synopsis>
+      </ReportItem>
+    </ReportHost>
+    <ReportHost name="192.168.1.3">
+      <HostProperties>
+        <tag name="host-ip">192.168.1.3</tag>
+        <tag name="operating-system">Linux</tag>
+      </HostProperties>
+      <ReportItem port="22" svc_name="ssh" protocol="tcp" severity="0" pluginID="10881" pluginName="SSH Server" pluginFamily="General">
+        <synopsis>SSH server is running on this port.</synopsis>
+      </ReportItem>
+    </ReportHost>
+  </Report>
+</NessusClientData_v2>

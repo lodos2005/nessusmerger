@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NessusClientData_v2>
+  <Policy>
+    <policyName>Basic Network Scan</policyName>
+    <policyComments></policyComments>
+  </Policy>
+  <Report name="Test Report 2">
+    <ReportHost name="192.168.1.2">
+      <HostProperties>
+        <tag name="host-ip">192.168.1.2</tag>
+        <tag name="operating-system">Windows</tag>
+      </HostProperties>
+      <ReportItem port="445" svc_name="microsoft-ds" protocol="tcp" severity="2" pluginID="10394" pluginName="SMB Share" pluginFamily="Windows">
+        <synopsis>SMB shares are available on this host.</synopsis>
+      </ReportItem>
+    </ReportHost>
+    <ReportHost name="192.168.1.4">
+      <HostProperties>
+        <tag name="host-ip">192.168.1.4</tag>
+        <tag name="operating-system">MacOS</tag>
+      </HostProperties>
+      <ReportItem port="5900" svc_name="vnc" protocol="tcp" severity="1" pluginID="10342" pluginName="VNC Server" pluginFamily="Service detection">
+        <synopsis>VNC server is running on this port.</synopsis>
+      </ReportItem>
+    </ReportHost>
+    <ReportHost name="192.168.1.5">
+      <HostProperties>
+        <tag name="host-ip">192.168.1.5</tag>
+        <tag name="operating-system">Linux</tag>
+      </HostProperties>
+      <ReportItem port="3306" svc_name="mysql" protocol="tcp" severity="2" pluginID="10719" pluginName="MySQL Server" pluginFamily="Databases">
+        <synopsis>MySQL server is running on this port.</synopsis>
+      </ReportItem>
+    </ReportHost>
+  </Report>
+</NessusClientData_v2>

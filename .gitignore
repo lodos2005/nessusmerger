@@ -1,10 +1,16 @@
-.history
-examples/
-other_project/
-output/
-test_data/
-details.txt
-.DS_Store
-
-
+# Go binaries
 nessusmerger
+nessusmerger.exe
+
+# Output directory
+/
+/output/
+.qoder
+/.history
+
+# IDE settings folders
+.idea/
+.vscode/
+
+# Mac specific files
+.DS_Store
